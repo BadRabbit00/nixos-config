@@ -2,11 +2,6 @@
   # WiFi drivers for Broadcom BCM43228
   hardware.enableRedistributableFirmware = true;
 
-# Allow unfree packages for WiFi/Bluetooth firmware
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-    "broadcom-bt-firmware"
-    "broadcom_sta"
-  ];
   # Enable Broadcom WiFi drivers
   # boot.kernelModules = [ "b43" "bcma" ];
   
@@ -26,7 +21,7 @@
   # Enable additional WiFi firmware
   hardware.firmware = with pkgs; [
     firmwareLinuxNonfree
-    broadcom-bt-firmware
+    #broadcom-bt-firmware
   ];
 
   # Use broadcom-sta (wl) driver - proprietary but stable
