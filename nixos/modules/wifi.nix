@@ -8,12 +8,14 @@
   # Alternative: Use broadcom-sta driver (proprietary but often more stable)
   boot.kernelModules = [ "wl" ];
   
-  # Blacklist conflicting drivers
+  # Blacklist conflicting drivers (combined list)
   boot.blacklistedKernelModules = [ 
     "ssb" 
     "bcm43xx" 
     "b43legacy"
     "bcma-pci-bridge"
+    "b43"
+    "bcma"
   ];
   
   # Enable additional WiFi firmware
@@ -22,10 +24,8 @@
     broadcom-bt-firmware
   ];
 
-  # Alternative approach: Use broadcom-sta (wl) driver
-  # Uncomment if b43 doesn't work well
+  # Use broadcom-sta (wl) driver - proprietary but stable
   boot.extraModulePackages = with config.boot.kernelPackages; [
     broadcom_sta
   ];
-  boot.blacklistedKernelModules = [ "b43" "bcma" ];
 }
