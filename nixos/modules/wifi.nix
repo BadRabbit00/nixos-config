@@ -1,4 +1,4 @@
-{
+{ config, pkgs, ... }: {
   # WiFi drivers for Broadcom BCM43228
   hardware.enableRedistributableFirmware = true;
   
