@@ -13,6 +13,7 @@
     ./nh.nix
     ./nix.nix
     ./timezone.nix
+    ./unfree.nix
     ./user.nix
     ./wifi.nix
     ./zram.nix

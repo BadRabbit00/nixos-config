@@ -21,7 +21,7 @@
   # Enable additional WiFi firmware
   hardware.firmware = with pkgs; [
     firmwareLinuxNonfree
-    #broadcom-bt-firmware
+    broadcom-bt-firmware
   ];
 
   # Use broadcom-sta (wl) driver - proprietary but stable
