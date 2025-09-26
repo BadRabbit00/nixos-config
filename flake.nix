@@ -29,6 +29,7 @@
     hosts = [
       { hostname = "slim3"; stateVersion = "24.05"; }
       { hostname = "330-15ARR"; stateVersion = "24.11"; }
+      { hostname = "BADRABBIT-HP-00"; stateVersion = "24.11"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
